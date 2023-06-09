@@ -9,14 +9,15 @@
     <title>Web Development Code Quiz</title>
 </head>
 <body>
-<!--Section containing the High Scores and Timer-->
+<!--Section containing the High Scores Tab and Timer-->
     <nav id="score-time">
         <a class="scores" href="./scores.html">View High Scores</a>
         <h3 class="timer">Time: </h3>
     </nav>
 
-<!--Main section containing Greeting and Starter Button-->    
+    
     <main>
+<!--Section containing Greeting, Description/Rules and Starter Button-->
         <section id="greeting">
             <div>
                 <h1 class="title">Welcome to the Web Development Code Quiz Challenge!</h1>
@@ -26,7 +27,22 @@
                time limit. Keep in mind that <span>INCORRECT ANSWERS</span> will penalize 
                your score and time by ten seconds!
             </p>
-            <button class="btn-start" type="button">Start Quiz !</button>
+            <button id="btn-start" type="button">Start Quiz !</button>
+        </section>
+
+<!--Section containing the Multiple Choice Questions-->        
+        <section id="questions" class="hidden">
+            <h2 id="web-dev-questions"></h2>
+            <p id="answer-choice" class="choice"></p>
+        </section>
+
+ <!--Section containing the Finished Alert, Final Score, Name, and Submit Score Button-->
+        <section id="quiz-finished" class="hidden">
+            <h2>Congratulations! You Finished!</h2>
+            <p>Your Final Score Is: <span id="final-score"></span></p>
+            <p>Please enter your name: <input type="text" id="name" max="2"/>
+            <button id="score-submit">Submit Score !</button>
+            </p>
         </section>
     </main>
 

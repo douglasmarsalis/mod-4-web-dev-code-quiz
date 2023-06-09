@@ -31,7 +31,12 @@ THEN I can save my initials and score
 ## Sources
 - First item Eric Meyer CSS Reset:
 https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
-- Second item
+- Second item Various websites for how to do certain tasks: 
+              W3 Schools - https://www.w3schools.com/ 
+              Stackoverflow - https://stackoverflow.com/
+              Mozilla mdn - https://developer.mozilla.org/en-US/ 
+- Third item Seeing what other WDs are doing for the task:
+              https://github.com/nhanng19/timed_quiz
 
 ## Link to Deployed Site
 
