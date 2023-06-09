@@ -29,8 +29,9 @@ WHEN the game is over
 THEN I can save my initials and score
 
 ## Sources
-
-
+- First item Eric Meyer CSS Reset:
+https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
+- Second item
 
 ## Link to Deployed Site
 
