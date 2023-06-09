@@ -35,11 +35,14 @@ https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
 
 ## Link to Deployed Site
 
+https://douglasmarsalis.github.io/mod-4-web-dev-code-quiz/
 
 ## Link to Github Repository
 
+https://github.com/douglasmarsalis/mod-4-web-dev-code-quiz
 
 ## Screenshot of Webpage
+
 
 
 ## License
