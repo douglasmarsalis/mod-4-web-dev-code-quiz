@@ -2,7 +2,82 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    ;
+    margin: 20px;
+    
+}
+
+#score-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: maroon;
+    font-size: 20px;
+}
+
+#greeting {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 200px;
+    padding: 100px;
+    border: solid 4px grey;
+}
+
+h1 {
+    font-size: 32px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+    padding: 20px 75px 20px;
+}
+
+span {
+    color: maroon;
+}
+
+.btn-start {
+    font-size: 24px;
+    background-color: blue;
+    color: beige;
+    border: solid 2px black;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px 2px gray;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* Mobile Devices*/
+@media screen and (max-width: 320px) {
 
 }
 
+/* iPad and Tablets*/
+@media screen and (max-width: 481px) {
+
+}
+
+/* Small Screens and Laptops*/
+@media screen and (max-width: 769px) {
+
+}
+
+/* Desktops and Large Screens*/
+@media screen and (max-width:1025px) {
+
+}
+
+/* Destops and Large Screens*/
+@media screen and (max-width:1060px) {
+
+}
