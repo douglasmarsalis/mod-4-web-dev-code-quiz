@@ -32,11 +32,17 @@ THEN I can save my initials and score
 - First item Eric Meyer CSS Reset:
 https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
 - Second item Various websites for how to do certain tasks: 
-              W3 Schools - https://www.w3schools.com/ 
-              Stackoverflow - https://stackoverflow.com/
-              Mozilla mdn - https://developer.mozilla.org/en-US/ 
+            W3 Schools - https://www.w3schools.com/ 
+            Stackoverflow - https://stackoverflow.com/
+            Mozilla mdn - https://developer.mozilla.org/en-US/ 
 - Third item Seeing what other WDs are doing for the task:
-              https://github.com/nhanng19/timed_quiz
+            https://github.com/nhanng19/timed_quiz
+- Fourth item Quiz question ideas:
+            https://www.proprofs.com/quiz-school/topic/web-development
+- Fifth item Rice University mini project:
+            https://git.bootcampcontent.com/Rice-University/RICE-VIRT-
+            FSF-PT-05-2023-U-LOLC/-/blob/main/04-Web-APIs/01-Activities/
+            28-Stu_Mini-Project/_Main/assets/js/script.js           
 
 ## Link to Deployed Site
 
