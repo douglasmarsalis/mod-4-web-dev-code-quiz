@@ -42,8 +42,8 @@ nav > a {
     align-items: center;
     flex-wrap: wrap;
     background-color:aliceblue;
-    margin-top: 25px;
-    padding: 50px;
+    margin: 25px;
+    padding: 50px 400px;
     border: solid 4px grey;
     box-shadow: 5px 5px 10px 2px gray;  
 }
