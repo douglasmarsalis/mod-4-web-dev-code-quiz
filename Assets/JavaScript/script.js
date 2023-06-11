@@ -80,9 +80,11 @@ var timerId;
 function quizStart() {
     timerId = setInterval(clockTick, 1000);
     timerElement.textContent = time;
-    var greetingPageElement = document.getElementById("greeting");
-    greetingPageElement.setAttribute("class", "hidden");
-    questionsElement.removeAttribute("class");
+    var mainPageElement = document.getElementById("greeting");
+    document.getElementById("greeting").style.display = "none";
+    document.getElementById("quiz-finished").style.display = "none";
+   /* mainPageElement.setAttribute("class", "hide");
+    questionsElement.removeAttribute("class");*/
     getQuestion();
 }
 
@@ -95,7 +97,7 @@ function getQuestion() {
     currentQuestion.options.forEach(function(choice, i) {
     var choiceBtn = document.createElement("button");
     choiceBtn.setAttribute("value", choice);
-    choiceBtn.textContent = i + 1 + ". " + choice;
+    choiceBtn.textContent = i + 1 + ". " + choice + " ";
     choiceBtn.onclick = questionClick;
     answerChoiceElement.appendChild(choiceBtn);
     });
@@ -111,7 +113,7 @@ function questionClick() {
         }
 // This will display a message when Wrong answer is given in color maroon
         timerElement.textContent = time;
-        answerFeedbackElement.textContent = 'Sorry, but that answer is WRONG ! It is ${questions[currentQuestionIndex].answer}.';
+        answerFeedbackElement.textContent = "Sorry, but that answer is WRONG !";
         answerFeedbackElement.style.color = "maroon";
 // This will display a message when Correct answer is given in the color green
     } else {
@@ -120,8 +122,8 @@ function questionClick() {
     }
         answerFeedbackElement.setAttribute("class", "feedback");
         setTimeout(function() {
-        answerFeedbackElement.setAttribute("class", "feedback hidden");
-    }, 1000);
+        answerFeedbackElement.setAttribute("class", "feedback hide");
+    }, 2000);
 // This will display the next question unless the user reaches the end of the quiz
         currentQuestionIndex++;
     if (currentQuestionIndex === questions.length) {
@@ -132,13 +134,13 @@ function questionClick() {
 }
 
 // This will finish the quiz, Prompts will be displayed to let the user know their score
-function quiz-finished() {
+function quizFinished() {
     clearInterval(timerId);
     var endScreenElement = document.getElementById("quiz-finished");
     endScreenElement = removeAttribute("class");
     var finalScoreElement = document.getElementById("final-score");
     finalScoreElement.textContent = time;
-    questionsElement.setAttribute("class", "hidden");
+    questionsElement.setAttribute("class", "hide");
 }
 
 // The ends and the timer will reach zero
@@ -171,6 +173,7 @@ function checkForEnter(event) {
         saveHighScore();
     }
 }
+
 enterNameElement.onkeyup = checkForEnter;
 
 // This button will submit the High Score to the list

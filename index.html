@@ -12,36 +12,35 @@
     <header>
         <nav id="score-time">
             <a id="view-high-scores" class="scores" href="./scores.html">View High Scores</a>
-            <h3 id="timer" class="timer">Time: </h3>
+            <h3 class="timer">Time: <span id="timer" >0</span></h3>
         </nav>
     </header>
     
-    <main>
+    <main class="quiz">
 <!--Section containing Greeting, Description/Rules and Starter Button-->
-        <section id="greeting">
+        <section class="main-page" id="greeting" id="quiz-start">
             <h1 class="title">Welcome to the Web Development Code Quiz Challenge</h1>
             <p class="description">Try to answer the following code-related questions within the time limit. Keep in mind that <span>INCORRECT ANSWERS</span> will penalize 
                your score and time by ten seconds.
             </p>
-            <button id="btn-start" type="button">Start Quiz !</button>
+            <button id="btn-start" type="button">Start Quiz</button>
         </section>
-
 <!--Section containing the Multiple Choice Questions and Answers-->        
-        <section id="questions" class="hidden">
+        <section id="questions" class="hide">
             <h2 id="web-dev-questions"></h2>
             <p id="answer-choice" class="choice"></p>
         </section>
 
  <!--Section containing the Finished Alert, Final Score, Name, and Submit Score Button-->
-        <section id="quiz-finished" class="hidden">
+        <section id="quiz-finished" class="hide">
             <h2>Congratulations, you finished!</h2>
-            <p class="final-score">Your Final Score Is: <span id="final-score"></span></p>
-            <p id="name" class="name">Please enter your name: <input type="text" id="name" max="3"/></p>
+            <p>Your Final Score Is: <span id="final-score"></span></p>
+            <p>Please enter your name: <input type="text" id="name" max="3"/></p>
             <button id="score-submit">Submit Score</button>
         </section>
 
 <!--Section for Correct and Wrong Answers Feedback-->
-        <section id="feedback" class="feedback hidden"></section>
+        <section id="feedback" class="feedback hide"></section>
 
     </main>
 
