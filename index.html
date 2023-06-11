@@ -12,7 +12,7 @@
     <header>
         <nav id="score-time">
             <a class="scores" href="./scores.html">View High Scores</a>
-            <h3 class="timer">Time: </h3>
+            <h3 id="timer" class="timer">Time: </h3>
         </nav>
     </header>
     
@@ -20,14 +20,13 @@
 <!--Section containing Greeting, Description/Rules and Starter Button-->
         <section id="greeting">
             <h1 class="title">Welcome to the Web Development Code Quiz Challenge</h1>
-            <p class="description">Try to answer the following code-related questions within the 60 second
-               time limit. Keep in mind that <span>INCORRECT ANSWERS</span> will penalize 
+            <p class="description">Try to answer the following code-related questions within the time limit. Keep in mind that <span>INCORRECT ANSWERS</span> will penalize 
                your score and time by ten seconds.
             </p>
             <button id="btn-start" type="button">Start Quiz !</button>
         </section>
 
-<!--Section containing the Multiple Choice Questions-->        
+<!--Section containing the Multiple Choice Questions and Answers-->        
         <section id="questions" class="hidden">
             <h2 id="web-dev-questions"></h2>
             <p id="answer-choice" class="choice"></p>
@@ -37,9 +36,13 @@
         <section id="quiz-finished" class="hidden">
             <h2>Congratulations, you finished!</h2>
             <p class="final-score">Your Final Score Is: <span id="final-score"></span></p>
-            <p class="name">Please enter your name: <input type="text" id="name" max="3"/></p>
+            <p id="name" class="name">Please enter your name: <input type="text" id="name" max="3"/></p>
             <button id="score-submit">Submit Score !</button>
         </section>
+
+<!--Section for Correct and Wrong Answers Feedback-->
+        <section id="feedback" class="feedback hidden"></section>
+
     </main>
 
     <script src="./assets/JavaScript/script.js"></script>

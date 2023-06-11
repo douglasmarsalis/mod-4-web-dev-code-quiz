@@ -61,8 +61,68 @@ var questions = [
     }
 ];
 
+// Element Query selectors that target IDs in the HTML
+var questionsElement = document.querySelector("#questions");
+var timerElement = document.querySelector("#timer");
+var answerChoiceElement = document.querySelector("#answer-choice");
+var scoreSubmitBtnElement = document.querySelector("#score-submit");
+var startButtonElement = document.querySelector("#btn-start");
+var enterNameElement = document.querySelector("#name");
+var answerFeedbackElement = document.querySelector("#feedback");
+/*
+var  = document.querySelector("#");
+*/
 
+// Quiz beginning 
+var currentQuestionIndex = 0;
+var time = questions.length * 10;
+var timerId;
 
+// Start quiz and hide greeting page
+function quizStart() {
+    timerId = setInterval(clockTick, 1000);
+    timerElement.textContent = time;
+    var greetingPageElement = document.getElementById("greeting");
+    greetingPageElement.setAttribute("class", "hidden");
+    questionsElement.removeAttribute("class");
+    getQuestion();
+}
+
+// Loops through the array of questions and answers from above and creates a list
+function getQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];
+    var promptElement = document.getElementById("web-dev-questions")
+    promptElement.textContent = currentQuestion.prompt;
+    answerChoiceElement.innerHTML = "";
+    currentQuestion.options.forEach(function(choice, i) {
+    var choiceBtn = document.createElement("button");
+    choiceBtn.setAttribute("value", choice);
+    choiceBtn.textContent = i + 1 + ". " + choice;
+    choiceBtn.onclick = questionClick;
+    answerChoiceElement.appendChild(choiceBtn);
+    });
+}
+
+//This section will check for the Correct or Wrong answers and will Deduct Time for the Wrong answers
+function questionClick() {
+// This subtracts 10 seconds off of the clock for Wrong answer    
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        time -= 10;
+        if (time < 0) {
+            time = 0;
+        }
+// This will display a message when Wrong answer is given in color maroon
+        timerElement.textContent = time;
+        answerFeedbackElement.textContent = 'Sorry, but that answer is WRONG !';
+        answerFeedbackElement.style.color = "maroon";
+// This will display a message when Correct answer is given in the color green
+    } else {
+        answerFeedbackElement.textContent = "Correct !";
+        answerFeedbackElement.style.color = "green";
+    }
+    answerFeedbackElement.setAttribute("class", "feedback");
+
+}
 
 
 /*1. What does HTML stand for?
