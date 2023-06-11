@@ -84,7 +84,7 @@ span {
 }
 
 /*Start Button on Main Page*/
-#btn-start {
+#btn-start, #restart, #clear {
     font-size: 24px;
     background-color: blue;
     color: beige;
@@ -103,6 +103,10 @@ span {
     border-radius: 4px;
     box-shadow: 5px 5px 10px 2px gray;
     cursor: pointer; 
+}
+
+#restart {
+    margin-right: 20px;
 }
 
 /* Mobile Devices*/

@@ -1,4 +1,4 @@
-// Questions and Answers Array List
+// Questions and Answers Array List - Can add additional questions and answers as needed.  There is NO limit on the length.
 var questions = [
     {
         prompt: "1. What does HTML stand for?",
@@ -121,7 +121,7 @@ function questionClick() {
         answerFeedbackElement.setAttribute("class", "feedback");
         setTimeout(function() {
         answerFeedbackElement.setAttribute("class", "feedback hidden");
-    } 2000);
+    }, 1000);
 // This will display the next question unless the user reaches the end of the quiz
         currentQuestionIndex++;
     if (currentQuestionIndex === questions.length) {
@@ -235,4 +235,27 @@ ANSWER: b
 a) Add *                        b) Multiply *
 c) Divide /                     d) Remainder % 
 ANSWER: a
+
+Simple Timer
+function startTimer() {
+  // Sets timer
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+    if (timerCount >= 0) {
+      // Tests if win condition is met
+      if (isWin && timerCount > 0) {
+        // Clears interval and stops timer
+        clearInterval(timer);
+        winGame();
+      }
+    }
+    // Tests if time has run out
+    if (timerCount === 0) {
+      // Clears interval
+      clearInterval(timer);
+      loseGame();
+    }
+  }, 1000);
+}
 */
