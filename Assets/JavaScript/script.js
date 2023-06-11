@@ -1,4 +1,4 @@
-// Questions and Answers List
+// Questions and Answers Array List
 var questions = [
     {
         prompt: "1. What does HTML stand for?",
@@ -69,9 +69,7 @@ var scoreSubmitBtnElement = document.querySelector("#score-submit");
 var startButtonElement = document.querySelector("#btn-start");
 var enterNameElement = document.querySelector("#name");
 var answerFeedbackElement = document.querySelector("#feedback");
-/*
-var  = document.querySelector("#");
-*/
+var restartButtonElement = document.querySelector("#restart");
 
 // Quiz beginning 
 var currentQuestionIndex = 0;
@@ -108,21 +106,80 @@ function questionClick() {
 // This subtracts 10 seconds off of the clock for Wrong answer    
     if (this.value !== questions[currentQuestionIndex].answer) {
         time -= 10;
-        if (time < 0) {
-            time = 0;
+    if (time < 0) {
+        time = 0;
         }
 // This will display a message when Wrong answer is given in color maroon
         timerElement.textContent = time;
-        answerFeedbackElement.textContent = 'Sorry, but that answer is WRONG !';
+        answerFeedbackElement.textContent = 'Sorry, but that answer is WRONG ! It is ${questions[currentQuestionIndex].answer}.';
         answerFeedbackElement.style.color = "maroon";
 // This will display a message when Correct answer is given in the color green
     } else {
         answerFeedbackElement.textContent = "Correct !";
         answerFeedbackElement.style.color = "green";
     }
-    answerFeedbackElement.setAttribute("class", "feedback");
-
+        answerFeedbackElement.setAttribute("class", "feedback");
+        setTimeout(function() {
+        answerFeedbackElement.setAttribute("class", "feedback hidden");
+    } 2000);
+// This will display the next question unless the user reaches the end of the quiz
+        currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
 }
+
+// This will finish the quiz, Prompts will be displayed to let the user know their score
+function quiz-finished() {
+    clearInterval(timerId);
+    var endScreenElement = document.getElementById("quiz-finished");
+    endScreenElement = removeAttribute("class");
+    var finalScoreElement = document.getElementById("final-score");
+    finalScoreElement.textContent = time;
+    questionsElement.setAttribute("class", "hidden");
+}
+
+// The ends and the timer will reach zero
+function clockTick() {
+    time--;
+    timerElement.textContent = time;
+    if (time <= 0) {
+        quizEnd();
+    }
+}
+
+// This section will store the score and the user's name
+function saveHighScore() {
+    var name = enterNameElement.value.trim();
+    if (name !== "") {
+        var highscores = 
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
+        var newScore = {
+            score: time,
+            name: name
+        };
+        highscores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    }
+}
+
+// Save the user's name and score by pressing the Enter button
+function checkForEnter(event) {
+    if (event.key === "Enter") {
+        saveHighScore();
+    }
+}
+enterNameElement.onkeyup = checkForEnter;
+
+// This button will submit the High Score to the list
+scoreSubmitBtnElement.onclick = saveHighScore;
+
+// This button will start the quiz
+startButtonElement.onclick = quizStart;
+
+
 
 
 /*1. What does HTML stand for?
