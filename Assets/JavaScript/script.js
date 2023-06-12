@@ -65,11 +65,11 @@ var questions = [
 var questionsElement = document.querySelector("#questions");
 var timerElement = document.querySelector("#timer");
 var answerChoiceElement = document.querySelector("#answer-choice");
-var scoreSubmitBtnElement = document.querySelector("#score-submit");
-var startButtonElement = document.querySelector("#btn-start");
+var scoreSubmitButton = document.querySelector("#score-submit");
+var startButton = document.querySelector("#btn-start");
 var enterNameElement = document.querySelector("#name");
 var answerFeedbackElement = document.querySelector("#feedback");
-var restartButtonElement = document.querySelector("#restart");
+var restartButton = document.querySelector("#restart");
 
 // Quiz beginning 
 var currentQuestionIndex = 0;
@@ -92,14 +92,14 @@ function quizStart() {
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     var promptElement = document.getElementById("web-dev-questions")
-    promptElement.textContent = currentQuestion.prompt;
-    answerChoiceElement.innerHTML = "";
-    currentQuestion.options.forEach(function(choice, i) {
+        promptElement.textContent = currentQuestion.prompt;
+        answerChoiceElement.innerHTML = "";
+        currentQuestion.options.forEach(function(choice, i) {
     var choiceBtn = document.createElement("button");
-    choiceBtn.setAttribute("value", choice);
-    choiceBtn.textContent = i + 1 + ". " + choice + " ";
-    choiceBtn.onclick = questionClick;
-    answerChoiceElement.appendChild(choiceBtn);
+        choiceBtn.setAttribute("value", choice);
+        choiceBtn.textContent = i + 1 + ". " + choice;
+        choiceBtn.onclick = questionClick;
+        answerChoiceElement.appendChild(choiceBtn);
     });
 }
 
@@ -177,10 +177,10 @@ function checkForEnter(event) {
 enterNameElement.onkeyup = checkForEnter;
 
 // This button will submit the High Score to the list
-scoreSubmitBtnElement.onclick = saveHighScore;
+scoreSubmitButton.onclick = saveHighScore;
 
 // This button will start the quiz
-startButtonElement.onclick = quizStart;
+startButton.onclick = quizStart;
 
 
 

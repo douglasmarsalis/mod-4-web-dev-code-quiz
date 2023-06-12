@@ -35,6 +35,7 @@ THEN I can save my initials and score
             Mozilla mdn - https://developer.mozilla.org/en-US/ 
 - Second item Seeing what other WDs are doing for the task:
             https://github.com/nhanng19/timed_quiz
+            https://github.com/Jefid/timed-quiz/blob/main/index.html
 - Third item Quiz question ideas:
             https://www.proprofs.com/quiz-school/topic/web-development
 - Fourth item Rice University mini project:

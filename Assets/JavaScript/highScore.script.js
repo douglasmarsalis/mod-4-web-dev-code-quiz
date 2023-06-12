@@ -11,7 +11,7 @@ function printHighscores() {
     highscores.forEach(function(score) {
       var liTag = document.createElement("li");
       liTag.textContent = score.name + " - " + score.score;
-      var olEl = document.getElementById("high-score-list");
+      var olElement = document.getElementById("high-score-list");
       olElement.appendChild(liTag);
     });
 }
