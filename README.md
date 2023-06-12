@@ -34,14 +34,16 @@ THEN I can save my initials and score
             Stackoverflow - https://stackoverflow.com/
             Mozilla mdn - https://developer.mozilla.org/en-US/ 
 - Second item Seeing what other WDs are doing for the task:
-            https://github.com/nhanng19/timed_quiz
             https://github.com/Jefid/timed-quiz/blob/main/index.html
+            https://github.com/nhanng19/timed_quiz
 - Third item Quiz question ideas:
             https://www.proprofs.com/quiz-school/topic/web-development
 - Fourth item Rice University mini project:
             https://git.bootcampcontent.com/Rice-University/RICE-VIRT-
             FSF-PT-05-2023-U-LOLC/-/blob/main/04-Web-APIs/01-Activities/
-            28-Stu_Mini-Project/_Main/assets/js/script.js           
+            28-Stu_Mini-Project/_Main/assets/js/script.js 
+- Fifth item Also, I would like to thank Daniel for reviewing my code and 
+            helping me with my JavaScript issues.          
 
 ## Link to Deployed Site
 

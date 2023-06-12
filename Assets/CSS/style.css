@@ -43,7 +43,7 @@ nav > a {
     flex-wrap: wrap;
     background-color:aliceblue;
     margin: 25px;
-    padding: 50px 400px;
+    padding: 50px 200px;
     border: solid 4px grey;
     box-shadow: 5px 5px 10px 2px gray;  
 }
@@ -109,11 +109,15 @@ span {
     margin-right: 20px;
 }
 
-
+/*Quiz Finished*/
+#quiz-finished {
+    display: none;
+}
 
 /* MEDIA QUERIES */
 /* Mobile Devices*/
 @media screen and (max-width: 320px) {
+
 #score-time {
     display: grid;
     justify-content: center;
@@ -182,6 +186,7 @@ nav > a {
 
 /* Small Screens and Laptops*/
 @media screen and (max-width: 769px) {
+    
 #greeting {
     display: flex;
     justify-content: center;
@@ -204,6 +209,18 @@ nav > a {
 .description {
     font-size: 28px;
     padding: 5px 5px;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 50px 250px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
 }
 }
 
@@ -269,4 +286,30 @@ nav > a {
     font-size: 24px;
     padding: 5px 5px;
 }
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 50px 250px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+}
+
+@media screen and (max-width:1200px) {
+    #score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+        margin: 25px;
+        padding: 50px 250px;
+        border: solid 4px grey;
+        box-shadow: 5px 5px 10px 2px gray;
+    }
 }

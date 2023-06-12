@@ -127,7 +127,7 @@ function questionClick() {
 // This will display the next question unless the user reaches the end of the quiz
         currentQuestionIndex++;
     if (currentQuestionIndex === questions.length) {
-        quizEnd();
+        quizFinished();
     } else {
         getQuestion();
     }
@@ -135,9 +135,12 @@ function questionClick() {
 
 // This will finish the quiz, Prompts will be displayed to let the user know their score
 function quizFinished() {
+    document.getElementById("quiz-finished").style.display = "block";
+    document.getElementById("questions").style.display = "none";
+    document.getElementById("feedback").style.display = "none";
     clearInterval(timerId);
     var endScreenElement = document.getElementById("quiz-finished");
-    endScreenElement = removeAttribute("class");
+    //endScreenElement = removeAttribute("class");
     var finalScoreElement = document.getElementById("final-score");
     finalScoreElement.textContent = time;
     questionsElement.setAttribute("class", "hide");
@@ -148,23 +151,30 @@ function clockTick() {
     time--;
     timerElement.textContent = time;
     if (time <= 0) {
-        quizEnd();
+        quizFinished();
     }
 }
 
 // This section will store the score and the user's name
 function saveHighScore() {
+
+    console.log(time);
     var name = enterNameElement.value.trim();
-    if (name !== "") {
-        var highscores = 
-        JSON.parse(window.localStorage.getItem("highscores")) || [];
-        var newScore = {
-            score: time,
-            name: name
-        };
-        highscores.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    console.log(name);
+    if (parseFloat(localStorage.getItem("time")) <= time || localStorage.getItem("time") == null) {
+    localStorage.setItem("name", name)
+    localStorage.setItem("time", time)
     }
+    // if (name !== "") {
+    //     var highscores = 
+    //     JSON.parse(window.localStorage.getItem("highscores")) || [];
+    //     var newScore = {
+    //         score: time,
+    //         name: enterNameElement
+    //     };
+    //     highscores.push(newScore);
+    //     window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    // }
 }
 
 // Save the user's name and score by pressing the Enter button
