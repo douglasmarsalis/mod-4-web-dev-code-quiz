@@ -123,7 +123,7 @@ function questionClick() {
         answerFeedbackElement.setAttribute("class", "feedback");
         setTimeout(function() {
         answerFeedbackElement.setAttribute("class", "feedback hide");
-    }, 2000);
+    }, 1000);
 // This will display the next question unless the user reaches the end of the quiz
         currentQuestionIndex++;
     if (currentQuestionIndex === questions.length) {
