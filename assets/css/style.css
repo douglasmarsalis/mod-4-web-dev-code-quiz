@@ -259,6 +259,19 @@ nav > a {
     font-size: 20px;
     padding: 5px 5px;
 }
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 50px 250px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
 }
 
 /* Destops and Large Screens*/
@@ -295,7 +308,7 @@ nav > a {
     flex-wrap: wrap;
     background-color: aliceblue;
     margin: 25px;
-    padding: 50px 250px;
+    padding: 50px 220px;
     border: solid 4px grey;
     box-shadow: 5px 5px 10px 2px gray;
 }
@@ -310,20 +323,6 @@ nav > a {
         background-color: aliceblue;
         margin: 25px;
         padding: 50px 350px;
-        border: solid 4px grey;
-        box-shadow: 5px 5px 10px 2px gray;
-    }
-}
-
-@media only screen and(min-width: 1201px) {
-    #score {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        background-color: aliceblue;
-        margin: 25px;
-        padding: 75px 550px;
         border: solid 4px grey;
         box-shadow: 5px 5px 10px 2px gray;
     }

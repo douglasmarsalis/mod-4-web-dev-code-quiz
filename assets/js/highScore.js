@@ -6,11 +6,13 @@ printHighscores()
 
 function printHighscores() {
   score.innerHTML = `
-            <br>
-            <font size="28px">Top Score</font>
+            <br />
+            <h1>Top Score</h1>
+            <br />
             <p>
             The player with the highest time was 
-            <p>
+            </p>
+            <br />
             <font color="blue">${localStorage.getItem("name")} with a score of ${localStorage.getItem("time")}</font>.`
 }
 //     var highscores = JSON.parse(window.localStorage.getItem("high-score-list")) || [];
