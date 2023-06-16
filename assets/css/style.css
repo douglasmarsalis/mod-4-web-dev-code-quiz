@@ -1,0 +1,330 @@
+/*Imported Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,700&display=swap');
+
+/*HTML body set-up*/
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    
+}
+/*Header section containing the Navigation for High Scores and also the Timer*/
+#score-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: maroon;
+    font-size: 20px;
+}
+
+/*Navigation tab*/
+nav > a {
+    text-decoration: none;
+    font-size: 24px;
+}
+/*Greeting, P Description, Start Button and Score Button*/
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 25px;
+    padding: 100px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*scores.html page*/
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin: 25px;
+    padding: 50px 200px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;  
+}
+
+/*scores.html page Title*/
+.score-title {
+    font-size: 36px;
+    color:darkblue;
+    padding-bottom: 10px; 
+}
+
+/*scores.html page*/
+#high-score-list {
+    font-size: 24px;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 36px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+
+/*P quiz description*/
+.description {
+    font-size: 24px;
+    padding: 20px 75px 20px;
+}
+
+/*All spans*/
+span {
+    color: maroon;
+}
+
+/*P Final Score and Enter Nmae*/
+.final-score, .name {
+    font-size: 24px;
+}
+
+/*Start Button on Main Page*/
+#btn-start, #restart, #clear {
+    font-size: 24px;
+    background-color: blue;
+    color: beige;
+    border: solid 2px black;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px 2px gray;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#score-submit {
+   font-size: 24px;
+    background-color: blue;
+    color: beige;
+    border: solid 2px black;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px 2px gray;
+    cursor: pointer; 
+}
+
+#restart {
+    margin-right: 20px;
+}
+
+/*Quiz Finished*/
+#quiz-finished {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+/* Mobile Devices*/
+@media only screen and (max-width: 320px) {
+
+#score-time {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: maroon;
+    font-size: 20px;
+}
+
+/*Navigation tab*/
+nav > a {
+    text-decoration: none;
+    font-size: 24px;
+}
+/*Greeting, P Description, Start Button and Score Button*/
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 10px;
+    padding: 25px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 36px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+/*P quiz description*/
+.description {
+    font-size: 16px;
+    padding: 5px 5px;
+}
+}
+
+/* iPad and Tablets*/
+@media only screen and (max-width: 480px) {
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 10px;
+    padding: 25px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 36px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+/*P quiz description*/
+.description {
+    font-size: 24px;
+    padding: 5px 5px;
+}
+}
+
+/* Small Screens and Laptops*/
+@media only screen and (max-width: 769px) {
+
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 10px;
+    padding: 15px 100px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 36px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+/*P quiz description*/
+.description {
+    font-size: 28px;
+    padding: 5px 5px;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 25px 200px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+}
+
+/* Desktops and Large Screens*/
+@media only screen and (max-width:1025px) {
+/*Navigation tab*/
+nav > a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.timer {
+    font-size: 20px;
+}
+
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    margin-top: 10px;
+    padding: 15px 100px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 30px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+/*P quiz description*/
+.description {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+}
+
+/* Destops and Large Screens*/
+@media only screen and (max-width:1060px) {
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    height: auto;
+    margin: 200px 150px;
+    padding: 15px 100px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+/*H1 greeting*/
+.title {
+    font-size: 30px;
+    color:darkblue;
+    padding-bottom: 10px;
+}
+/*P quiz description*/
+.description {
+    font-size: 24px;
+    padding: 5px 5px;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 50px 250px;
+    border: solid 4px grey;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+}
+
+@media only screen and (max-width:1200px) {
+    #score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+        margin: 25px;
+        padding: 50px 350px;
+        border: solid 4px grey;
+        box-shadow: 5px 5px 10px 2px gray;
+    }
+}
+
+@media only screen and(min-width: 1201px) {
+    #score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+        margin: 25px;
+        padding: 75px 550px;
+        border: solid 4px grey;
+        box-shadow: 5px 5px 10px 2px gray;
+    }
+}
