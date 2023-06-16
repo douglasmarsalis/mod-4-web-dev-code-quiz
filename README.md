@@ -55,7 +55,7 @@ https://github.com/douglasmarsalis/mod-4-web-dev-code-quiz
 
 ## Screenshot of Webpage
 
-![Screen shot of my webpage](Assets/Images/Screenshot-Code-Quiz.png)
+![Screen shot of my webpage](assets/images/Screenshot-Code-Quiz.png)
 
 ## License
 
