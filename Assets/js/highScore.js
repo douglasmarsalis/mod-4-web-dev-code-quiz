@@ -26,9 +26,10 @@ function printHighscores() {
 // }
 
 // Clear previous scores when users click clear 
-  function clearHighscores() {
-    window.localStorage.removeItem("high-score-list");
-    window.location.reload();
-  } document.getElementById("clear").onclick = clearHighscores;
+  // function clearHighscores() {
+  //   window.localStorage.removeItem("high-score-list");
+  //   window.location.reload();
+  // } 
+  // document.getElementById("clear").onclick = clearHighscores;
   
 printHighscores();
